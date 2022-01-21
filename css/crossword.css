@@ -183,7 +183,7 @@ main>.content{
 }.cell.cursor{
     fill:#ac1c40
 }.cell.cursor.solved{
-    fill:#595858
+    fill:#ac1c40
 }
 @media (prefers-reduced-motion){
     .cell{
@@ -200,7 +200,7 @@ main>.content{
 }.letter.error{
     fill:#ff3d26
 }.letter.solved{
-    fill:#767676
+    fill:#000000
 }.letter.cursor{
     fill:white
 }.clues.letter.solved{
@@ -344,7 +344,7 @@ main>.content{
 #solve-button {
     position: fixed;
     left: 700px;
-    bottom: 150px;
+    bottom: 40px;
     font-size: 70px;
 }
 

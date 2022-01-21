@@ -566,7 +566,7 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 
-// startTimer();
+startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
@@ -632,8 +632,3 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray);
 }
 
-function resetTimer() {
-    const TIME_LIMIT = 60;
-    timer = document.getElementById("clickme").onclick =doFunction;
-    
-}
