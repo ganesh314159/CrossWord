@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>PHI-WORDS by FIZIKA</title>
+<link rel="icon" type="image/x-icon" href="/images/fizika_picsart.png">
+<meta content="PHI-WORDS, a crossword puzzle by FIZIKA" name=description>
+<meta content=#ac1c40 name=theme-color>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<meta content=https://files.greeneclipse.com/share/images/social/banner-v1.png property=og:image>
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<!-- <link href=/css/timer.css rel=stylesheet> -->
+<link href=/css/crossword.css rel=stylesheet>
+<link href=/css/sqg7je.css rel=stylesheet>
+<link href=/css/fade.css rel=stylesheet>
+<link href="https://use.typekit.net/af/bccc98/000000000000000000014868/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3" rel=preload as=font crossorigin>
+<link href=/share/images/app/logo.svg rel=icon>
+<link href=/share/images/app/logo-mask.svg rel=mask-icon color=#000000>
+<link href=/share/images/app/logo-solid180.png rel=apple-touch-icon>
+<script src="/js/crossword.js"></script>
+<!-- <script src="/js/timer.js"></script> -->
+</head>
+<body>
+<header>
+<div>
+    <!-- <div class="w3-container">
+        <h1 class="w3-center w3-animate-bottom">Animation is Fun!</h1>
+      </div> -->
+<h1 class=title id=fizika>
+PHI-WORDS <span class=author><span data-locid=by></span> FIZIKA</span>
+</h1>
+<!-- <div class=home id=eclips>
+    <a target=_blank>
+        <img alt="Share EclipseCrossword" height=90 src=images/eclipslogo.svg title="" width=422></a>
+    </div> -->
+<!-- <div class=relative id=kjssc>
+    <a href="/images/kjssclogo.svg" target="_blank">
+        <img alt="KJSSC" height=150 src=images/kjssclogo.svg title="" width=452>
+    </a>
+</div> -->
+<div class=relative id=fizika>
+    <a href="/images/fizika_picsart.png" target="_blank">
+        <img alt="FIZIKA" height=190 src=images/fizika_picsart.png title="" width=180>
+    </a>
+</div>
+</div>
+</header>
+<div id="app" class=timer></div>
+<div id=start-timer class=start-button>
+    <script type="module">
+        import startTimer from "/js/crossword.js"
+        function resetTimer(){
+            const TIME_LIMIT = 60;
+            startTimer();
+        }
+    </script>
+    <input id="clickMe" type="button" value="StartTimer" onclick="resetTimer();" />
+    
+</div>
+<main>
+    
+<div class=content>
+<div class=root id=root style=display:none>
+<div class=grid-container>
+<div class=grid-content id=crossword-svg-container></div>
+</div>
+<div class=clues id=across>
+<h2 data-locid=across>Across</h2>
+<ol id=across-clues>
+    <li value=2 id=clue2>Flashy death of a star</li>
+    <li value=4 id=clue4>Survival expert of mars</li>
+    <li value=7 id=clue7>The man who filled colours in shadow of light</li>
+    <li value=8 id=clue8>It still has the crater made by Saitama</li>
+    <li value=10 id=clue10>The phenomenon happening due to the collapse of a star, with an extremely high gravity field</li>
+    <li value=12 id=clue12>The next door neighbour of milky way</li>
+    <li value=14 id=clue14>Genius of the big bang</li>
+    <li value=15 id=clue15>A spacecraft with the same name as a sci-fi movie starring Scarlett Johansson</li>
+</ol>
+</div>
+<div class=clues id=down>
+<h2 data-locid=down>Down</h2>
+<ol id=down-clues>
+    <li value=1 id=1>May the _________ be with you</li>
+    <li value=3 id=3>When current met ampere</li>
+    <li value=5 id=5>One hour here is 7 years on earth.</li>
+    <li value=6 id=6>and then earth said, &quot;You are not part of us&quot;</li>
+    <li value=9 id=9>The place where you can fly but cannot breathe</li>
+    <li value=11 id=11>It&#39;s there on earth as well as around Jupiter</li>
+    <li value=13 id=13>There&#39;s a glitch in the matrix</li>
+</ol>
+</div>
+<div class=message id=congrats-message>
+<div>
+<strong data-locid=congrats1></strong> <span data-locid=congrats2></span>
+</div>
+</div>
+<div class=message id=check-message>
+<div>
+<span data-locid=checkBefore></span> <span id=check-correct-words></span> <span data-locid=checkOf></span> <span id=check-word-count></span> <span data-locid=checkAfter></span>
+</div>
+</div>
+<div class=under-grid>
+<a id=solve-button><span data-locid=solve></span> <span id=solves-left></span></a>
+</div>
+<div class=under-clues>
+<a id=check-button><span data-locid=checkAnswers></span> <span id=checks-left></span></a>
+</div>
+</div>
+<div class=curtain id=curtain></div>
+<div class=flexspacer></div>
+<div class=mobile-pane id=mobile-pane>
+<div class=when-no-selection>
+<div class=title>
+<div class=menu-button id=mobile-pane-back><svg height=42 width=32>
+<path d=M18,14l-8,8l8,8m-8,-8h16 />
+</svg></div>
+<h1>
+PHI-WORDS <span class=author><span data-locid=by></span> FIZIKA</span>
+</h1>
+</div>
+</div>
+<p class="when-no-selection subtle">
+© 2022
+</p>
+<p class="when-no-selection commands">
+<a id=check-button-mobile><span data-locid=checkAnswers></span> <span id=checks-left-mobile></span></a>
+</p>
+<div class=logo-area>
+<!-- <div class="when-closed logo">
+<img alt="Share EclipseCrossword" height=32 src=/share/images/logo.svg title="" width=222>
+</div>
+<div class="when-no-selection logo">
+<a href="https://www.eclipsecrossword.com/share/back?from-share=6c2b2613" target=_blank><img alt="Share EclipseCrossword" height=32 src=/share/images/logo.svg title="" width=222></a>
+</div> -->
+<div class="menu-button when-closed"><svg height=48 width=48>
+<path d=M14,17h20m0,7h-20m0,7h20 />
+</svg></div>
+</div>
+<!-- <p class="when-no-selection subtle">
+Share EclipseCrossword © 2020-2021 <a href=https://www.greeneclipse.com/ target=_blank>Green Eclipse</a>.
+<a href=https://www.eclipsecrossword.com/share/terms target=_blank data-locid=terms></a>.
+<span data-locid=makeYourOwn></span> -->
+</p>
+<div class=when-has-selection>
+<div class=mobile-clue>
+<p id=clue-mobile></p>
+<input id=entry-box-mobile type=text>
+<div class=commands>
+<div class=error-indicator id=letter-count-area-mobile><span id=letter-count-mobile></span> <span data-locid=letters></span></div>
+<a id=solve-button-mobile><span data-locid=solve></span> <span id=solves-left-mobile></span></a>
+<div class=flexspacer></div>
+<a id=close-clue-button-mobile data-locid=close></a>
+</div>
+</div>
+</div>
+</div>
+<noscript lang=en-US>
+<h2 style=margin:3em>You must enable JavaScript to play.</h2>
+</noscript>
+<div id=no-class style=display:none lang=en-US>
+<h2>Sorry, you need a newer web browser.</h2>
+<p>
+The browser that you’re using is out of date, and isn’t capable of using this service.
+</p>
+</div>
+</div>
+</main>
+<footer>
+<p>
+FIZIKA &#169; 2022
+<br>
+<!-- Share EclipseCrossword © 2020-2021 <a href=https://www.greeneclipse.com/ target=_blank>Green Eclipse</a>.
+<a href=https://www.eclipsecrossword.com/share/terms target=_blank data-locid=terms></a>.
+<span data-locid=makeYourOwn></span> -->
+</p>
+</footer>
+<script>function hasClass(){try{return!!eval("async()=>1;class x{}")&&!navigator.userAgent.includes("Edge")}catch(e){return!1}}hasClass()?document.getElementById("root").style.display="":(document.getElementById("no-class").style.display="",location.href="https://www.eclipsecrossword.com/share/help/unsupported-browser?from-share=6c2b2613")</script>
+<script type=module>
+import c from "/js/crossword.js"
+c({"version":1,"shareID":"6c2b2613","language":"en","title":"PHI-WORDS","author":"FIZIKA","copyright":"\u00A9 2022","words":[{"x":2,"y":10,"direction":0,"word":"BLACKHOLE","length":9},{"x":7,"y":12,"direction":0,"word":"ANDROMEDA","length":9},{"x":11,"y":7,"direction":0,"word":"MOON","length":4},{"x":12,"y":15,"direction":0,"word":"SHELDON","length":7},{"x":0,"y":3,"direction":0,"word":"CURIOSITYROVER","length":14},{"x":13,"y":19,"direction":0,"word":"LUCY","length":4},{"x":2,"y":7,"direction":0,"word":"MAXWELL","length":7},{"x":9,"y":1,"direction":0,"word":"SUPERNOVA","length":9},{"x":4,"y":9,"direction":1,"word":"WATER","length":5},{"x":10,"y":10,"direction":1,"word":"EUROPA","length":6},{"x":8,"y":6,"direction":1,"word":"PLUTO","length":5},{"x":12,"y":1,"direction":1,"word":"ELECTRODYNAMICS","length":15},{"x":17,"y":5,"direction":1,"word":"TIMEDILATION","length":12},{"x":14,"y":14,"direction":1,"word":"DEJAVU","length":6},{"x":0,"y":0,"direction":1,"word":"FORCE","length":5}],"rtl":false,"checks":false,"solves":true})
+</script>
+<script src="/js/timer.js"></script>
+<!-- © 2020-2021 Green Eclipse. -->
+</body>
+</html>
