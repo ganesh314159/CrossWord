@@ -297,7 +297,51 @@ main>.content{
 }.is-phone .clues{
     display:none
 }.message{
-    grid-area:message / 1 / message / -1;border:1px solid #c3c3c3;border-radius:8px;background-color:#f6f6f6;box-shadow:0 2px 3px rgba(0,0,0,0.05);text-align:center;overflow:hidden;visibility:hidden;opacity:0;max-height:0;transition:visibility 0s 0.350s, max-height 0.350s 0s, opacity 0.350s 0s}.message>*{margin:0.5em}.message.open{margin:16px 4px;visibility:visible;opacity:1;max-height:4em;transition-delay:0s, 0s, 0s}@media (prefers-reduced-motion){.message{transition:none}}.under-grid{grid-row:controls;margin:16px 0 0 20px;font-family:calluna,serif;font-variant-caps:all-small-caps;font-feature-settings:"c2sc" 1;text-transform:uppercase}.under-grid a{user-select:none}.is-touch .under-grid,.is-phone .under-grid{display:none}.under-clues{grid-column:clues;grid-row:controls;margin:16px 20px 0 32px;font-family:calluna,serif;font-variant-caps:all-small-caps;font-feature-settings:"c2sc" 1;text-transform:uppercase}.under-clues a{user-select:none}.is-touch .under-clues,.is-phone .under-clues{display:none}.curtain{display:none;position:absolute;left:0;top:0;right:0;bottom:0;z-index:1}.curtain.open{display:block;background-color:rgba(255,255,255,0.7);backdrop-filter:blur(3px)}.mobile-pane{flex:none;display:none;align-self:stretch;flex-direction:column;z-index:2;background-color:#f6f6f6}.is-phone .mobile-pane,.is-touch .mobile-pane,.mobile-pane.open{display:flex}.mobile-pane.open{border-top:1px solid #ac1c40;box-shadow:0 -1px 3px rgba(172,28,64,0.75)}.mobile-pane.open .when-closed{display:none}.mobile-pane:not(.open){cursor:pointer}.mobile-pane:not(.open) .when-open{display:none}.mobile-pane .when-has-selection{display:none}.mobile-pane .when-no-selection{display:none}.mobile-pane.open.has-selection .when-has-selection{display:unset}.mobile-pane.open.has-selection .when-no-selection{display:none}.mobile-pane.open:not(.has-selection) .when-has-selection{display:none}.mobile-pane.open:not(.has-selection) .when-no-selection{display:unset}.mobile-pane .logo-area{display:flex;flex-direction:row}.mobile-pane .logo-area>.logo{flex:1;margin:8px}.mobile-pane .logo-area>.menu-button{flex:0 0 48px}.mobile-pane .title{display:flex}.mobile-pane .title .menu-button{flex:0 0 auto;margin:0;width:32px;height:42px;cursor:pointer}.mobile-pane .menu-button{stroke:#000;stroke-width:2px;fill:none}.mobile-pane h1{margin:8px 8px 8px 4px;font-size:22px;line-height:28px}.mobile-pane .author{color:#ac1c40}.mobile-pane p{margin:8px}.mobile-pane p.subtle{color:#767676;font-size:14px;line-height:20px}.mobile-pane a{user-select:none}.mobile-pane .commands{margin:40px 8px;font-family:calluna,serif;font-variant-caps:all-small-caps;font-feature-settings:"c2sc" 1;text-transform:uppercase}.mobile-pane .mobile-clue{display:flex;flex-direction:column}.mobile-pane .mobile-clue p{margin:8px}.mobile-pane .mobile-clue input{margin:0 8px;border-style:none none solid none;border-width:0 0 2px 0;border-radius:0;border-color:white;background-color:white;font-family:calluna,serif;font-variant-caps:titling-caps;text-transform:uppercase;letter-spacing:.2em;color:#000;font-size:19px;line-height:28px}.mobile-pane .mobile-clue input:focus{border-color:#ac1c40;outline:none}.mobile-pane .mobile-clue input::placeholder{color:#c3c3c3}.mobile-pane .mobile-clue .commands{margin:0;display:flex;color:#a3a3a3}.mobile-pane .mobile-clue .commands>*{margin:8px}.mobile-pane .mobile-clue .commands>.error-indicator{margin:8px 0;padding:0 8px;border-radius:9999px}.mobile-pane .mobile-clue .commands>.error-indicator.error{animation:1s error-pulse}@keyframes error-pulse{10%{color:white;background-color:#ac1c40}30%{color:initial;background-color:initial}40%{color:white;background-color:#ac1c40}}
+    grid-area:message / 1 / message / -1;border:1px solid #c3c3c3;border-radius:8px;background-color:#f6f6f6;box-shadow:0 2px 3px rgba(0,0,0,0.05);text-align:center;overflow:hidden;visibility:hidden;opacity:0;max-height:0;transition:visibility 0s 0.350s, max-height 0.350s 0s, opacity 0.350s 0s}.message>*{margin:0.5em}.message.open{margin:16px 4px;visibility:visible;opacity:1;max-height:4em;transition-delay:0s, 0s, 0s}
+    @media (prefers-reduced-motion){
+        .message{transition:none}
+    }
+    .under-grid{
+        grid-row:controls;
+        margin:16px 0 0 20px;
+        font-family:calluna,serif;
+        font-variant-caps:all-small-caps;
+        font-feature-settings:"c2sc" 1;
+        text-transform:uppercase
+    }
+    .under-grid a{
+        user-select:none
+    }
+    .is-touch .under-grid,
+    .is-phone .under-grid{
+        display:none
+    }
+    .under-clues{
+        grid-column:clues;
+        grid-row:controls;
+        margin:16px 20px 0 32px;
+        font-family:calluna,serif;
+        font-variant-caps:all-small-caps;
+        font-feature-settings:"c2sc" 1;
+        text-transform:uppercase
+    }
+    .under-clues a{
+        user-select:none
+    }
+    .is-touch .under-clues,
+    .is-phone .under-clues{
+        display:none
+    }
+    .curtain{
+        display:none;
+        position:absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        z-index:1
+    }
+    .curtain.open{display:block;background-color:rgba(255,255,255,0.7);backdrop-filter:blur(3px)}.mobile-pane{flex:none;display:none;align-self:stretch;flex-direction:column;z-index:2;background-color:#f6f6f6}.is-phone .mobile-pane,.is-touch .mobile-pane,.mobile-pane.open{display:flex}.mobile-pane.open{border-top:1px solid #ac1c40;box-shadow:0 -1px 3px rgba(172,28,64,0.75)}.mobile-pane.open .when-closed{display:none}.mobile-pane:not(.open){cursor:pointer}.mobile-pane:not(.open) .when-open{display:none}.mobile-pane .when-has-selection{display:none}.mobile-pane .when-no-selection{display:none}.mobile-pane.open.has-selection .when-has-selection{display:unset}.mobile-pane.open.has-selection .when-no-selection{display:none}.mobile-pane.open:not(.has-selection) .when-has-selection{display:none}.mobile-pane.open:not(.has-selection) .when-no-selection{display:unset}.mobile-pane .logo-area{display:flex;flex-direction:row}.mobile-pane .logo-area>.logo{flex:1;margin:8px}.mobile-pane .logo-area>.menu-button{flex:0 0 48px}.mobile-pane .title{display:flex}.mobile-pane .title .menu-button{flex:0 0 auto;margin:0;width:32px;height:42px;cursor:pointer}.mobile-pane .menu-button{stroke:#000;stroke-width:2px;fill:none}.mobile-pane h1{margin:8px 8px 8px 4px;font-size:22px;line-height:28px}.mobile-pane .author{color:#ac1c40}.mobile-pane p{margin:8px}.mobile-pane p.subtle{color:#767676;font-size:14px;line-height:20px}.mobile-pane a{user-select:none}.mobile-pane .commands{margin:40px 8px;font-family:calluna,serif;font-variant-caps:all-small-caps;font-feature-settings:"c2sc" 1;text-transform:uppercase}.mobile-pane .mobile-clue{display:flex;flex-direction:column}.mobile-pane .mobile-clue p{margin:8px}.mobile-pane .mobile-clue input{margin:0 8px;border-style:none none solid none;border-width:0 0 2px 0;border-radius:0;border-color:white;background-color:white;font-family:calluna,serif;font-variant-caps:titling-caps;text-transform:uppercase;letter-spacing:.2em;color:#000;font-size:19px;line-height:28px}.mobile-pane .mobile-clue input:focus{border-color:#ac1c40;outline:none}.mobile-pane .mobile-clue input::placeholder{color:#c3c3c3}.mobile-pane .mobile-clue .commands{margin:0;display:flex;color:#a3a3a3}.mobile-pane .mobile-clue .commands>*{margin:8px}.mobile-pane .mobile-clue .commands>.error-indicator{margin:8px 0;padding:0 8px;border-radius:9999px}.mobile-pane .mobile-clue .commands>.error-indicator.error{animation:1s error-pulse}@keyframes error-pulse{10%{color:white;background-color:#ac1c40}30%{color:initial;background-color:initial}40%{color:white;background-color:#ac1c40}}
 
 
 
@@ -436,3 +480,89 @@ body {
     transition:opacity 0.1s
 }
 */
+
+#startButton {
+    position: fixed;
+    right: 400px;
+    top: 150px;
+    /* margin:16px 0 0 20px; */
+    font-family:calluna,serif;
+    font-variant-caps:all-small-caps;
+    font-feature-settings:"c2sc" 1;
+    text-transform:uppercase;
+}
+
+.start-button {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .start-button img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .start-button .btn {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .start-button .btn:hover {
+    background-color: black;
+    color: white;
+  }
+
+#clueButton {
+    position: fixed;
+    right: 650px;
+    bottom: 30px;
+    /* margin:16px 0 0 20px; */
+    font-family:calluna,serif;
+    font-variant-caps:all-small-caps;
+    font-feature-settings:"c2sc" 1;
+    text-transform:uppercase;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .container .btnn {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .container .btnn:hover {
+    background-color: black;
+    color: white;
+  }

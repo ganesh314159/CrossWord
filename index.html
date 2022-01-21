@@ -19,7 +19,11 @@
 <link href=/share/images/app/logo-solid180.png rel=apple-touch-icon>
 <script src="/js/crossword.js"></script>
 <script type="module">
-import  "/js/crossword.js"
+    
+
+
+
+document.getElementById("startButton").addEventListener("click", function(){
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -38,7 +42,7 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 60;
+const TIME_LIMIT = 75;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -68,7 +72,7 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 
-// startTimer();
+startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
@@ -134,10 +138,24 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray);
 }
 
+});
 
-document.getElementById("startButton").addEventListener("click", function(){
-    const TIME_LIMIT = 60;
-    startTimer();
+document.getElementById("clueButton").addEventListener("click", function(){
+    document.getElementById("clue1").style.opacity = "1";
+    document.getElementById("clue2").style.opacity = "1";
+    document.getElementById("clue3").style.opacity = "1";
+    document.getElementById("clue4").style.opacity = "1";
+    document.getElementById("clue5").style.opacity = "1";
+    document.getElementById("clue6").style.opacity = "1";
+    document.getElementById("clue7").style.opacity = "1";
+    document.getElementById("clue8").style.opacity = "1";
+    document.getElementById("clue9").style.opacity = "1";
+    document.getElementById("clue10").style.opacity = "1";
+    document.getElementById("clue11").style.opacity = "1";
+    document.getElementById("clue12").style.opacity = "1";
+    document.getElementById("clue13").style.opacity = "1";
+    document.getElementById("clue14").style.opacity = "1";
+    document.getElementById("clue15").style.opacity = "1";
 });
 </script>
 <!-- <script src="/js/timer.js"></script> -->
@@ -169,8 +187,13 @@ PHI-WORDS <span class=author><span data-locid=by></span> FIZIKA</span>
 </div>
 </header>
 <div id="app" class=timer></div>
-<div id=start-timer class=start-button>
-    <button id="startButton">Start Timer</button>
+<div id=start-timer class="start-button">
+    <button id="startButton" id="solve-button" class="btn">Start Timer</button>
+    <!-- <a id=solve-button><span data-locid=solve></span> <span id=solves-left></span></a> -->
+</div>
+<div class="container">
+    <button id="clueButton" class="btnn">Show All Clues</button>
+    <!-- <a id=solve-button><span data-locid=solve></span> <span id=solves-left></span></a> -->
 </div>
 <main>
     
@@ -181,7 +204,7 @@ PHI-WORDS <span class=author><span data-locid=by></span> FIZIKA</span>
 </div>
 <div class=clues id=across>
 <h2 data-locid=across>Across</h2>
-<ol id=across-clues>
+<ol id=across-clues id=clues>
     <li value=2 id=clue2>Flashy death of a star</li>
     <li value=4 id=clue4>Survival expert of mars</li>
     <li value=7 id=clue7>The man who filled colours in shadow of light</li>
@@ -195,13 +218,13 @@ PHI-WORDS <span class=author><span data-locid=by></span> FIZIKA</span>
 <div class=clues id=down>
 <h2 data-locid=down>Down</h2>
 <ol id=down-clues>
-    <li value=1 id=1>May the _________ be with you</li>
-    <li value=3 id=3>When current met ampere</li>
-    <li value=5 id=5>One hour here is 7 years on earth.</li>
-    <li value=6 id=6>and then earth said, &quot;You are not part of us&quot;</li>
-    <li value=9 id=9>The place where you can fly but cannot breathe</li>
-    <li value=11 id=11>It&#39;s there on earth as well as around Jupiter</li>
-    <li value=13 id=13>There&#39;s a glitch in the matrix</li>
+    <li value=1 id=clue1>May the _________ be with you</li>
+    <li value=3 id=clue3>When current met ampere</li>
+    <li value=5 id=clue5>One hour here is 7 years on earth.</li>
+    <li value=6 id=clue6>and then earth said, &quot;You are not part of us&quot;</li>
+    <li value=9 id=clue9>The place where you can fly but cannot breathe</li>
+    <li value=11 id=clue11>It&#39;s there on earth as well as around Jupiter</li>
+    <li value=13 id=clue13>There&#39;s a glitch in the matrix</li>
 </ol>
 </div>
 <div class=message id=congrats-message>
